@@ -33,7 +33,7 @@ lista.addEventListener("click", function (event) {
     iniciar.style.pointerEvents = "none";
     iniciar.style.opacity = "0.5";
     iniciar.style.cursor = "default";
-    document.querySelector(".text > p:nth-child(1)").style.textDecoration =
+    item.querySelector(".text > p:nth-child(1)").style.textDecoration =
       "line-through";
   }
 });
