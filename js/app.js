@@ -17,17 +17,19 @@ document.getElementById("miform").addEventListener("submit", function (event) {
 });
 
 lista.addEventListener("click", function (event) {
-  var listo = document.querySelector(".listo");
-  var iniciar = document.querySelector(".iniciar");
   if (event.target.matches(".eliminar")) {
     event.target.closest(".item").remove();
   }
   if (event.target.matches(".iniciar")) {
+    const item = event.target.closest(".item");
+    const listo = item.querySelector(".listo");
     listo.style.pointerEvents = "initial";
     listo.style.opacity = "1";
     listo.style.cursor = "pointer";
   }
   if (event.target.matches(".listo")) {
+    const item = event.target.closest(".item");
+    const iniciar = item.querySelector(".iniciar");
     iniciar.style.pointerEvents = "none";
     iniciar.style.opacity = "0.5";
     iniciar.style.cursor = "default";
